@@ -1,14 +1,18 @@
-body {
+/*body {
   font-family: "Montserrat", sans-serif;
-}
+}*/
 
 /*Header Style*/
 header {
-  background: url("../images/da-img-1.jpg") no-repeat center center;
+  background: url("../images/glenn-carstens-peters-P1qyEf1g0HU-unsplash.jpg") no-repeat center center;
   position: relative;
   height: 100vh;
   min-height: 600px;
   background-size: cover;
+}
+
+.pierre-and-kevin {
+  font-family: 'Kalam', cursive;
 }
 
 .navbar-dark .navbar-nav .nav-link {
