@@ -132,14 +132,14 @@ header {
 
 /*Contact Style*/
 .da-contact {
-  background: url("../images/staticmap.png") no-repeat center center;
+  background: url("../images/bg-contact.jpg") no-repeat center center;
   position: relative;
   min-height: 700px;
   background-size: cover;
 }
 
 .da-contact .da-contact-detail {
-  padding: 8% 0 8% 1%;
+  padding: 11% 0 11% 1%;
 }
 
 @media (max-width: 992px) {
@@ -200,4 +200,18 @@ a.credit {
 /*Common Style*/
 .da-section {
   padding: 100px 0;
+}
+
+.da-section-with-button {
+  padding-top: 100px;
+  padding-bottom: 40px;
+}
+
+.margin-div-button {
+  text-align: center;
+  margin-top: 20px;
+}
+
+.padding-button {
+  padding: 10px 100px 10px 100px;
 }
