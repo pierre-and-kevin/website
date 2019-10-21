@@ -152,7 +152,7 @@
         <div class="row">
           <div class="col-md-7 col-sm-12 mb-3">
             <div class="da-contact-message">
-              <form action="https://formspree.io/your@email.com" method="POST">
+              <form>
                 <div class="row">
                   <div class="col-md-6 col-sm-12 mb-3">
                     <input class="mr-3 form-control" type="text" name="first-name" placeholder="*Prénom" required="required"/>
@@ -163,12 +163,12 @@
                 </div>
                 <div class="row mb-3">
                   <div class="col">
-                    <input class="form-control" type="text" name="Subject" placeholder="*Objet" required="required"/>
+                    <input class="form-control" type="email" name="email" placeholder="*E-mail" required="required"/>
                   </div>
                 </div>
                 <div class="row mb-3">
                   <div class="col">
-                    <input class="form-control" type="email" name="_replyto" placeholder="*E-mail" required="required"/>
+                    <input class="form-control" type="text" name="subject" placeholder="*Objet" required="required"/>
                   </div>
                 </div>
                 <div class="row mb-3">
@@ -176,9 +176,10 @@
                     <textarea class="form-control" name="message" placeholder="*Votre message" rows="4" required="required"></textarea>
                   </div>
                 </div>
+                <p style="color:red;" id="error-form"></p>
                 <div class="row">
                   <div class="col">
-                    <button class="btn btn-primary" type="submit">Envoyer</button>
+                    <button class="btn btn-primary" type="button" id="send-btn">Envoyer</button>
                   </div>
                 </div>
               </form>
@@ -204,3 +205,60 @@
     <script src="scripts/main.js"></script>
   </body>
 </html>
+
+<script>
+
+  function validateEmail(email) {
+    var re = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+    return re.test(String(email).toLowerCase());
+  }
+  
+  $('#send-btn').click(function() {
+    $('#send-btn').attr("disabled", "disabled")
+    
+    // verif des champs
+  
+    // verif email
+    if (!validateEmail($('input[name="email"]').val())) {
+      $('#error-form').text("Email invalide")
+      return
+    }
+
+    var fields = ["first-name", "last-name", "email", "subject", "message"]
+    var fieldsName = ["Prénom", "Nom", "Email", "Sujet", "Message"]
+    for (var i in fields) {
+      if ($('.form-control[name="' + fields[i] + '"]').val() === "") {
+        $('#error-form').text("Le champ " + fieldsName[i] + " n'est pas renseigné.")
+        return
+      }
+    }
+
+    // tout est ok
+    $('#error-form').text("")
+
+    var msg = "Nouveau contact depuis le site !<br>"
+    msg += $('.form-control[name="first-name"]').val() + " " + $('.form-control[name="last-name"]').val() + " - " + "<a href='mailto:" + $('.form-control[name="email"]').val() + "'>" + $('.form-control[name="email"]').val() + "</a><br>"
+    msg += "<br><b>" + $('.form-control[name="subject"]').val() + "</b><br>"
+    msg += $('.form-control[name="message"]').val()
+    msg += "<br><br><b>Pierre & Kévin.</b>"
+
+    var params = {
+      fromMail: "do-not-reply@mail.com",
+      fromName: "Pierre & Kévin",
+      toMail: ["pierre.leroy.mail@gmail.com"],//, "kevin.pottier@orange.fr"],
+      toName: ["Pierre", "Kévin"],
+      subject: "Demande de contact",
+      body: msg,
+    }
+
+    $.post("http://mailer.pierre-leroy.fr", params, function(e) {
+      if (e === "1") {
+        $('#send-btn').text("Message envoyé !")
+      } else {
+        alert('Une erreur est survenue, merci de réessayer plus tard.')
+        $('#send-btn').removeAttr("disabled")
+      }
+    })
+  });
+  
+</script>
