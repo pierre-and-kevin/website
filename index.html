@@ -25,8 +25,9 @@
   <link href="styles/main.css" rel="stylesheet">
   <link href="styles/main.css" rel="stylesheet">
   <link href="styles/edit.css" rel="stylesheet">
+  <link href="./flag-icon-css-master/css/flag-icon.css" rel="stylesheet">
 
-  <script src="https://kit.fontawesome.com/450703a00a.js" crossorigin="anonymous"></script>
+  <script src="./js/fontawesome.js" crossorigin="anonymous"></script>
 
 </head>
 <body id="top">
@@ -39,7 +40,13 @@
             <li class="nav-item"><a class="nav-link smooth-scroll" href="#">Accueil</a></li>
             <li class="nav-item"><a class="nav-link smooth-scroll" href="#learn">Pourquoi nous ?</a></li>
             <li class="nav-item"><a class="nav-link smooth-scroll" href="#services">Nos Services</a></li>
-            <li class="nav-item"><a class="nav-link smooth-scroll" href="#contact">Contact</a></li>
+            <li class="nav-item"><a class="nav-link smooth-scroll" href="#contact">Contact <span class="flag-icon flag-icon-fr"></span></a></li>
+            <li class="nav-item"><a class="nav-link smooth-scroll">
+              <select id="lang">
+                <option value="fr"><span class="flag-icon flag-icon-gr"></span></option>
+                <option value="en"><span class="flag-icon flag-icon-gr"></span></option>
+              </select>
+            </a></li>
           </ul>
         </div>
       </nav>
@@ -47,7 +54,7 @@
     <div class="da-home-page-text" data-aos="fade-right" data-aos-duration="1000">
       <div class="container pierre-and-kevin">
         <div class="col-md-10 col-sm-12 px-0 mx-0">
-          <h2 class="display-3" style="margin-left:-6px;">Pierre & Kévin</h2>
+          <h2 class="display-3" style="margin-left:-6px;"><plang name="intro"></plang></h2>
           <h3 class="h5 mt-3">Réalisons ensemble la façade numérique de votre entreprise.</h3><a class="smooth-scroll btn btn-outline-light mt-4" href="#learn">En savoir plus</a>
         </div>
       </div>
@@ -224,9 +231,9 @@
     <div id="scrolltop">
       <button class="btn btn-primary"><span class="icon"><i class="fas fa-angle-up fa-2x"></i></span></button>
     </div>
-    <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js"></script>
+    <script src="./js/jquery-3.3.1.min.js"></script>
+    <script src="./js/popper.min.js"></script>
+    <script src="./js/bootstrap.min.js"></script>
     <script src="js/aos.js"></script>
     <script src="js/ekko-lightbox.min.js"></script>
     <script src="scripts/main.js"></script>
@@ -234,58 +241,80 @@
   </html>
   
   <script>
-    
-    function validateEmail(email) {
-      var re = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
-      return re.test(String(email).toLowerCase());
-    }
-    
-    $('#send-btn').click(function() {
-      $('#send-btn').attr("disabled", "disabled")
+    $(document).ready(function() {
+
+      setLang()
+
+      function setLang(lang = "fr") {
+        // on récupère le fichier de config
+        $.get("./lang.json", (json) => {
+          // pour chaque balise plang on change le content
+          $('plang').each(function() {
+            var name = $(this).attr("name")
+            var text = json[name][lang]
+            $(this).html(text)
+          })
+        })
+      }
+
+      $('select#lang').on('change', function() {
+        setLang($(this).val())
+      })
+
       
-      // verif des champs
-      
-      // verif email
-      if (!validateEmail($('input[name="email"]').val())) {
-        $('#error-form').text("Email invalide")
-        return
+      function validateEmail(email) {
+        var re = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+        return re.test(String(email).toLowerCase())
       }
       
-      var fields = ["first-name", "last-name", "email", "subject", "message"]
-      var fieldsName = ["Prénom", "Nom", "Email", "Sujet", "Message"]
-      for (var i in fields) {
-        if ($('.form-control[name="' + fields[i] + '"]').val() === "") {
-          $('#error-form').text("Le champ " + fieldsName[i] + " n'est pas renseigné.")
+      $('#send-btn').click(function() {
+        $('#send-btn').attr("disabled", "disabled")
+        
+        // verif des champs
+        
+        // verif email
+        if (!validateEmail($('input[name="email"]').val())) {
+          $('#error-form').text("Email invalide")
           return
         }
-      }
-      
-      // tout est ok
-      $('#error-form').text("")
-      
-      var msg = "Nouveau contact depuis le site !<br>"
-      msg += $('.form-control[name="first-name"]').val() + " " + $('.form-control[name="last-name"]').val() + " - " + "<a href='mailto:" + $('.form-control[name="email"]').val() + "'>" + $('.form-control[name="email"]').val() + "</a><br>"
-      msg += "<br><b>" + $('.form-control[name="subject"]').val() + "</b><br>"
-      msg += $('.form-control[name="message"]').val()
-      msg += "<br><br><b>Pierre & Kévin.</b>"
-      
-      var params = {
-        fromMail: "do-not-reply@mail.com",
-        fromName: "Pierre & Kévin",
-        toMail: ["pierre.leroy.mail@gmail.com", "kevin.pottier@orange.fr"],
-        toName: ["Pierre", "Kévin"],
-        subject: "Demande de contact",
-        body: msg,
-      }
-      
-      $.post("http://mailer.pierre-leroy.fr", params, function(e) {
-        if (e === "1") {
-          $('#send-btn').text("Message envoyé !")
-        } else {
-          alert('Une erreur est survenue, merci de réessayer plus tard.')
-          $('#send-btn').removeAttr("disabled")
+        
+        var fields = ["first-name", "last-name", "email", "subject", "message"]
+        var fieldsName = ["Prénom", "Nom", "Email", "Sujet", "Message"]
+        for (var i in fields) {
+          if ($('.form-control[name="' + fields[i] + '"]').val() === "") {
+            $('#error-form').text("Le champ " + fieldsName[i] + " n'est pas renseigné.")
+            return
+          }
         }
+        
+        // tout est ok
+        $('#error-form').text("")
+        
+        var msg = "Nouveau contact depuis le site !<br>"
+        msg += $('.form-control[name="first-name"]').val() + " " + $('.form-control[name="last-name"]').val() + " - " + "<a href='mailto:" + $('.form-control[name="email"]').val() + "'>" + $('.form-control[name="email"]').val() + "</a><br>"
+        msg += "<br><b>" + $('.form-control[name="subject"]').val() + "</b><br>"
+        msg += $('.form-control[name="message"]').val()
+        msg += "<br><br><b>Pierre & Kévin.</b>"
+        
+        var params = {
+          fromMail: "do-not-reply@mail.com",
+          fromName: "Pierre & Kévin",
+          toMail: ["pierre.leroy.mail@gmail.com", "kevin.pottier@orange.fr"],
+          toName: ["Pierre", "Kévin"],
+          subject: "Demande de contact",
+          body: msg,
+        }
+        
+        $.post("http://mailer.pierre-leroy.fr", params, function(e) {
+          if (e === "1") {
+            $('#send-btn').text("Message envoyé !")
+          } else {
+            alert('Une erreur est survenue, merci de réessayer plus tard.')
+            $('#send-btn').removeAttr("disabled")
+          }
+        })
       })
-    });
+    })
+
     
   </script>

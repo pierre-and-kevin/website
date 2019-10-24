@@ -8,3 +8,9 @@
     margin: initial;
     padding: 5px 0;
 }
+
+select#lang {
+    background: transparent;
+    border-radius: 10px;
+    padding: 1px;
+}
