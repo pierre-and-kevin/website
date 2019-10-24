@@ -40,13 +40,8 @@
             <li class="nav-item"><a class="nav-link smooth-scroll" href="#">Accueil</a></li>
             <li class="nav-item"><a class="nav-link smooth-scroll" href="#learn">Pourquoi nous ?</a></li>
             <li class="nav-item"><a class="nav-link smooth-scroll" href="#services">Nos Services</a></li>
-            <li class="nav-item"><a class="nav-link smooth-scroll" href="#contact">Contact <span class="flag-icon flag-icon-fr"></span></a></li>
-            <li class="nav-item"><a class="nav-link smooth-scroll">
-              <select id="lang">
-                <option value="fr"><span class="flag-icon flag-icon-gr"></span></option>
-                <option value="en"><span class="flag-icon flag-icon-gr"></span></option>
-              </select>
-            </a></li>
+            <li class="nav-item"><a class="nav-link smooth-scroll" href="#contact">Contact</a></li>
+            <li class="nav-item"><a class="nav-link" id="flag-btn"><plang name="flag"></plang></a></li>
           </ul>
         </div>
       </nav>
@@ -257,10 +252,9 @@
         })
       }
 
-      $('select#lang').on('change', function() {
-        setLang($(this).val())
+      $('#flag-btn').click(function() {
+        setLang(($(this).find("plang").find("span").attr('data-lang')))
       })
-
       
       function validateEmail(email) {
         var re = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;

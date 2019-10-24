@@ -14,3 +14,7 @@ select#lang {
     border-radius: 10px;
     padding: 1px;
 }
+
+#flag-btn:hover {
+    cursor: pointer;
+}

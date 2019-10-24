@@ -2,5 +2,9 @@
     "intro": {
         "fr": "C'est l'introduction",
         "en": "this is the introduction"
+    },
+    "flag": {
+        "fr": "<span class='flag-icon flag-icon-gb' data-lang='en'></span>",
+        "en": "<span class='flag-icon flag-icon-fr' data-lang='fr'></span>"
     }
 }
