@@ -33,7 +33,7 @@
     },
     "slogan": {
         "fr": "Réalisons ensemble la façade numérique de votre entreprise.",
-        "en": "Let's do together your company showcase."
+        "en": "Let's do your company's showcase together."
     },
     "en_savoir_plus": {
         "fr": "En savoir plus",
@@ -72,8 +72,8 @@
         "en": "Results"
     },
     "reponse_resultats": {
-        "fr": "Vous aurez à votre disposition un site web et/ou une application mobile sur le modèle de votre entreprise",
-        "en": "You will have a website and/or a mobile app on you company's model."
+        "fr": "Vous aurez à votre disposition un site web sur le modèle de votre entreprise",
+        "en": "You will have a website on you company's model."
     },
     "dev_web": {
         "fr": "Développement web",
@@ -88,8 +88,8 @@
         "en": "Static or dynamic website, it is your choice!"
     },
     "dev_responsive": {
-        "fr": "Développement responsive",
-        "en": "Responsive development"
+        "fr": "Résultat adapté",
+        "en": "Responsive result"
     },
     "reponse_dev_responsive": {
         "fr": "Retrouvez votre site web directement sur votre téléphone ou sur votre tablette !",
