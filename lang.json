@@ -1,6 +1,147 @@
 {
-    "intro": {
-        "fr": "C'est l'introduction",
-        "en": "this is the introduction"
+    "langue": {
+        "fr": "FR",
+        "en": "EN"
+    },
+    "entreprise": {
+        "fr": "Pierre & Kévin",
+        "en": "Pierre & Kevin"
+    },
+    "accueil": {
+        "fr": "Accueil",
+        "en": "Home"
+    },
+    "nous": {
+        "fr": "Pourquoi nous ?",
+        "en": "Why us ?"
+    },
+    "services": {
+        "fr": "Nos Services",
+        "en": "Our Services"
+    },
+    "creations": {
+        "fr": "Nos Créations",
+        "en": "Our Projects"
+    },
+    "contact": {
+        "fr": "Contact",
+        "en": "Contact"
+    },
+    "slogan": {
+        "fr": "Réalisons ensemble la façade numérique de votre entreprise.",
+        "en": "TODO"
+    },
+    "en_savoir_plus": {
+        "fr": "En savoir plus",
+        "en": "More"
+    },
+    "question_avec_nous": {
+        "fr": "Pourquoi travailler avec nous ?",
+        "en": "Why work with us ?"
+    },
+    "reponse_1_avec_nous": {
+        "fr": "Nous travaillerons ensemble à la réalisation de votre projet pour qu'il corresponde à l'image de votre entreprise.",
+        "en": "TODO "
+    },
+    "reponse_2_avec_nous": {
+        "fr": "Chaque client est unique, chaque projet est différent.",
+        "en": "Each customer is unique, each project is different."
+    },
+    "experience": {
+        "fr": "Expérience",
+        "en": "Experience"
+    },
+    "reponse_experience": {
+        "fr": "Nous sommes deux ingénieurs dans les sciences du numérique souhaitant offrir une ouverture aux entreprises.",
+        "en": "TODO"
+    },
+    "adaptabilite": {
+        "fr": "Adaptabilité",
+        "en": "TODO"
+    },
+    "reponse_adaptabilite": {
+        "fr": "Nous vous écoutons et vous proposons un projet numérique adapté à vos besoins.",
+        "en": "TODO"
+    },
+    "resultats": {
+        "fr": "Résultats",
+        "en": "Results"
+    },
+    "reponse_resultats": {
+        "fr": "Vous aurez à votre disposition un site web et/ou une application mobile sur le modèle de votre entreprise",
+        "en": "TODO"
+    },
+    "dev_web": {
+        "fr": "Développement web",
+        "en": "TODO"
+    },
+    "reponse_1_dev_web": {
+        "fr": "Créons votre site web personnalisé !",
+        "en": "TODO"
+    },
+    "reponse_2_dev_web": {
+        "fr": "Site vitrine ou dynamique, c'est votre choix !",
+        "en": "TODO"
+    },
+    "dev_mobile": {
+        "fr": "Développement mobile",
+        "en": "TODO"
+    },
+    "reponse_dev_mobile": {
+        "fr": "Retrouvez votre site web directement sur votre téléphone et adaptez-le selon vos envies !",
+        "en": "TODO"
+    },
+    "maintenance": {
+        "fr": "Maintenance",
+        "en": "TODO"
+    },
+    "reponse_maintenance": {
+        "fr": "Vous souhaitez ajouter de nouvelles fonctionnalités à votre site web ou votre application mobile ? Contactez-nous !",
+        "en": "TODO"
+    },
+    "demande_devis": {
+        "fr": "Demander un devis gratuitement en quelques clics",
+        "en": "TODO"
+    },
+    "equipe": {
+        "fr": "La fine équipe !",
+        "en": "TODO"
+    },
+    "designer": {
+        "fr": "TODO",
+        "en": "Graphic Designer"
+    },
+    "developer": {
+        "fr": "TODO",
+        "en": "Software Developer"
+    },
+    "contactez_nous": {
+        "fr": "Contactez-nous",
+        "en": "Contact us"
+    },
+    "prenom": {
+        "fr": "Prénom",
+        "en": "Firstname"
+    },
+    "nom": {
+        "fr": "Nom",
+        "en": "Lastname"
+    },
+    "objet": {
+        "fr": "Objet",
+        "en": "Subject"
+    },
+    "votre_message": {
+        "fr": "Votre message",
+        "en": "Your message"
+    },
+    "envoyer": {
+        "fr": "Envoyer",
+        "en": "Submit"
+    },
+    "message_contact": {
+        "fr": "Pour toute question éventuelle, n'hésitez pas à remplir ce formulaire. Nous vous répondrons au plus vite !",
+        "en": "TODO"
+>>>>>>> Stashed changes
     }
 }

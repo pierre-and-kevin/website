@@ -611,6 +611,7 @@ pre code {
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
   margin-right: -15px;
+  margin-left: -15px;
 }
 
 .no-gutters {
@@ -4623,6 +4624,7 @@ input[type="button"].btn-block {
       -ms-flex-direction: column;
           flex-direction: column;
   min-width: 0;
+  height: 90%;
   word-wrap: break-word;
   background-color: #fff;
   background-clip: border-box;

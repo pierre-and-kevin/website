@@ -1,6 +1,6 @@
-/*body {
+body {
   font-family: "Montserrat", sans-serif;
-}*/
+}
 
 /*Header Style*/
 header {
@@ -9,10 +9,6 @@ header {
   height: 100vh;
   min-height: 600px;
   background-size: cover;
-}
-
-.pierre-and-kevin {
-  font-family: 'Kalam', cursive;
 }
 
 .navbar-dark .navbar-nav .nav-link {
