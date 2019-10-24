@@ -17,7 +17,7 @@
     },
     "nous": {
         "fr": "Pourquoi nous ?",
-        "en": "Why us ?"
+        "en": "Why us?"
     },
     "services": {
         "fr": "Nos Services",
@@ -33,19 +33,19 @@
     },
     "slogan": {
         "fr": "Réalisons ensemble la façade numérique de votre entreprise.",
-        "en": "TODO"
+        "en": "Let's do together your company showcase."
     },
     "en_savoir_plus": {
         "fr": "En savoir plus",
-        "en": "More"
+        "en": "Learn more"
     },
     "question_avec_nous": {
         "fr": "Pourquoi travailler avec nous ?",
-        "en": "Why work with us ?"
+        "en": "Why would you work with us?"
     },
     "reponse_1_avec_nous": {
-        "fr": "Nous travaillerons ensemble à la réalisation de votre projet pour qu'il corresponde à l'image de votre entreprise.",
-        "en": "TODO "
+        "fr": "Nous travaillerons ensemble à la réalisation de <b>votre</b> projet pour qu'il corresponde à l'image de <b>votre</b> entreprise.",
+        "en": "We will work together to create <b>your</b> project that looks like <b>your</b> company."
     },
     "reponse_2_avec_nous": {
         "fr": "Chaque client est unique, chaque projet est différent.",
@@ -57,15 +57,15 @@
     },
     "reponse_experience": {
         "fr": "Nous sommes deux ingénieurs dans les sciences du numérique souhaitant offrir une ouverture aux entreprises.",
-        "en": "TODO"
+        "en": "We are two engineers in computer science who would like to help you opening up to the world."
     },
     "adaptabilite": {
         "fr": "Adaptabilité",
-        "en": "TODO"
+        "en": "Adaptability"
     },
     "reponse_adaptabilite": {
         "fr": "Nous vous écoutons et vous proposons un projet numérique adapté à vos besoins.",
-        "en": "TODO"
+        "en": "We will listen to you and propose a digital project adapted to your needs."
     },
     "resultats": {
         "fr": "Résultats",
@@ -73,50 +73,50 @@
     },
     "reponse_resultats": {
         "fr": "Vous aurez à votre disposition un site web et/ou une application mobile sur le modèle de votre entreprise",
-        "en": "TODO"
+        "en": "You will have a website and/or a mobile app on you company's model."
     },
     "dev_web": {
         "fr": "Développement web",
-        "en": "TODO"
+        "en": "Web development"
     },
     "reponse_1_dev_web": {
         "fr": "Créons votre site web personnalisé !",
-        "en": "TODO"
+        "en": "Let's create your custom website!"
     },
     "reponse_2_dev_web": {
         "fr": "Site vitrine ou dynamique, c'est votre choix !",
-        "en": "TODO"
+        "en": "Static or dynamic website, it is your choice!"
     },
-    "dev_mobile": {
-        "fr": "Développement mobile",
-        "en": "TODO"
+    "dev_responsive": {
+        "fr": "Développement responsive",
+        "en": "Responsive development"
     },
-    "reponse_dev_mobile": {
-        "fr": "Retrouvez votre site web directement sur votre téléphone et adaptez-le selon vos envies !",
-        "en": "TODO"
+    "reponse_dev_responsive": {
+        "fr": "Retrouvez votre site web directement sur votre téléphone ou sur votre tablette !",
+        "en": "Get your website directly on you phone or tablet!"
     },
     "maintenance": {
         "fr": "Maintenance",
-        "en": "TODO"
+        "en": "Maintenance"
     },
     "reponse_maintenance": {
-        "fr": "Vous souhaitez ajouter de nouvelles fonctionnalités à votre site web ou votre application mobile ? Contactez-nous !",
-        "en": "TODO"
+        "fr": "Vous souhaitez ajouter de nouvelles fonctionnalités à votre site web ? Contactez-nous !",
+        "en": "You want more for your existing website? Contact us!"
     },
     "demande_devis": {
-        "fr": "Demander un devis gratuitement en quelques clics",
-        "en": "TODO"
+        "fr": "Demander un devis gratuitement en quelques clics !",
+        "en": "Ask for a price in a few seconds!"
     },
     "equipe": {
         "fr": "La fine équipe !",
-        "en": "TODO"
+        "en": "Let's meet the team!"
     },
     "designer": {
-        "fr": "TODO",
+        "fr": "Designer et graphiste",
         "en": "Graphic Designer"
     },
     "developer": {
-        "fr": "TODO",
+        "fr": "Développeur web / applicatif",
         "en": "Software Developer"
     },
     "contactez_nous": {
@@ -125,11 +125,11 @@
     },
     "prenom": {
         "fr": "Prénom",
-        "en": "Firstname"
+        "en": "First name"
     },
     "nom": {
         "fr": "Nom",
-        "en": "Lastname"
+        "en": "Last name"
     },
     "objet": {
         "fr": "Objet",
@@ -145,6 +145,6 @@
     },
     "message_contact": {
         "fr": "Pour toute question éventuelle, n'hésitez pas à remplir ce formulaire. Nous vous répondrons au plus vite !",
-        "en": "TODO"
+        "en": "If you have any question, please fill this form. We will reply as soon as we can!"
     }
 }
