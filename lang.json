@@ -124,20 +124,20 @@
         "en": "Contact us"
     },
     "prenom": {
-        "fr": "Prénom",
-        "en": "First name"
+        "fr": "<input class='mr-3 form-control' type='text' name='first-name' placeholder='*Prénom' required='required'/>",
+        "en": "<input class='mr-3 form-control' type='text' name='first-name' placeholder='*First name' required='required'/>"
     },
     "nom": {
-        "fr": "Nom",
-        "en": "Last name"
+        "fr": "<input class='form-control' type='text' name='last-name' placeholder='*Nom'/>",
+        "en": "<input class='form-control' type='text' name='last-name' placeholder='*Last name'/>"
     },
     "objet": {
-        "fr": "Objet",
-        "en": "Subject"
+        "fr": "<input class='form-control' type='text' name='subject' placeholder='*Objet' required='required'/>",
+        "en": "<input class='form-control' type='text' name='subject' placeholder='*Subject' required='required'/>"
     },
     "votre_message": {
-        "fr": "Votre message",
-        "en": "Your message"
+        "fr": "<textarea class='form-control' name='message' placeholder='*Votre message' rows='4' required='required'></textarea>",
+        "en": "<textarea class='form-control' name='message' placeholder='*Your message' rows='4' required='required'></textarea>"
     },
     "envoyer": {
         "fr": "Envoyer",
