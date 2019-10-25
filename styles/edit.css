@@ -18,3 +18,12 @@ select#lang {
 #flag-btn:hover {
     cursor: pointer;
 }
+
+a.btn-demande_devis_1 {
+    color: #212529;
+    background-color: #f8f9fa;
+}
+a.btn-demande_devis_2 {
+    background-color: #212529;
+    color: #f8f9fa;
+}
